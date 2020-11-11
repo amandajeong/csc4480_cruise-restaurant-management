@@ -30,7 +30,7 @@ CREATE TABLE host (
 DROP TABLE menu CASCADE CONSTRAINTS;
 CREATE TABLE menu (
     Menu_id     number(4)       not null,
-    Mitem_name  varchar2(25)    not null,
+    Mitem_name  varchar2(60)    not null,
     Mrest_id    number(4)       not null,
     Mcost       number(5,2)     not null,
     primary key (Menu_id),
@@ -47,6 +47,23 @@ CREATE TABLE reservation (
     Rwaiter_ssn     char(9)     not null,
     Rhost_ssn       char(9)     not null,
     primary key (Reservation_id),
+    foreign key (Rrest_id) references restaurant(rest_id),
     foreign key (Rwaiter_ssn) references waiter(Wssn),
     foreign key (Rhost_ssn) references host(Hssn)
 );
+
+DROP TABLE order_item CASCADE CONSTRAINTS;
+CREATE TABLE order_item (
+    Oreservation_id number(9)   not null,
+    Omenu_id        number(4)   not null,
+    primary key (Oreservation_id, Omenu_id),
+    foreign key (Oreservation_id) references restaurant(rest_id),
+    foreign key (Omenu_id) references menu(Menu_id)
+);
+
+DROP VIEW order_summary;
+CREATE VIEW order_summary(reservation_id, subtotal, tax, tip, total)
+AS SELECT reservation_id, sum(Mcost), sum(Mcost) * 0.05, sum(Mcost) * 0.2, sum(Mcost) * 1.25
+FROM ((reservation JOIN order_item ON Reservation_id = Oreservation_id)
+JOIN menu ON Menu_id = Omenu_id)
+GROUP BY reservation_id;
