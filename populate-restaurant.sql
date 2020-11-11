@@ -348,3 +348,110 @@ INSERT INTO host VALUES
 ('Annie','Maloney','558816253','4');
 INSERT INTO host VALUES
 ('Connor','Lawrence','581172095','4');
+
+INSERT INTO menu (Mrest_id, Menu_id, Mitem_name, Mcost)
+-- 1 - 150 Central Park
+ SELECT 1, 101, 'Roasted Organic Beet Salad', 13.00 FROM dual UNION ALL
+ SELECT 1, 102, 'Caesar Salad', 11.00 FROM dual UNION ALL
+ SELECT 1, 103, 'Seared Honey Glazed Scallops', 15.00 FROM dual UNION ALL
+ SELECT 1, 104, 'Braised Short Rib', 15.00 FROM dual UNION ALL
+ SELECT 1, 105, 'Sunchoke Velout' || chr(233), 13.00 FROM dual UNION ALL
+ SELECT 1, 106, 'Roasted Spiced Pumpkin Bisque', 11.00 FROM dual UNION ALL
+ SELECT 1, 107, 'Crispy Berkshire Pork Belly', 15.00 FROM dual UNION ALL
+ SELECT 1, 108, 'Pan-seared Halibut', 29.00 FROM dual UNION ALL
+ SELECT 1, 109, 'Seared Vension Loin', 27.00 FROM dual UNION ALL
+ SELECT 1, 110, 'Duck Duo', 36.00 FROM dual UNION ALL
+ SELECT 1, 111, 'Pan-seared Veal Medallions', 28.00 FROM dual UNION ALL
+ SELECT 1, 112, 'Lamb Wellington', 32.00 FROM dual UNION ALL
+ SELECT 1, 113, 'Lobster Thermidor', 33.00 FROM dual UNION ALL
+ SELECT 1, 114, 'Artisanal Cheese Selection', 15.00 FROM dual UNION ALL
+ SELECT 1, 115, 'Fried Cheesecake', 9.00 FROM dual UNION ALL
+ SELECT 1, 116, 'Peanut Butter Chocolate Tart', 9.00 FROM dual UNION ALL
+
+ -- 2 - Chops Grille
+ SELECT 2, 201, 'Colossal Shrimp Cocktail', 7.00 FROM dual UNION ALL
+ SELECT 2, 202, 'Tuta Tartare', 9.00 FROM dual UNION ALL
+ SELECT 2, 203, 'Jumbo Lump Crab Cake', 8.00 FROM dual UNION ALL
+ SELECT 2, 204, 'chrred Beef Carpaccio', 11.00 FROM dual UNION ALL
+ SELECT 2, 205, 'Grilled Black Pepper Bacon', 9.00 FROM dual UNION ALL
+ SELECT 2, 206, 'Chilled Grande Seafood Tower', 19.00 FROM dual UNION ALL
+ SELECT 2, 207, 'Chilled Imperial Seafood Tower', 39.00 FROM dual UNION ALL
+ SELECT 2, 208, 'Wild Mushroom Soup', 6.00 FROM dual UNION ALL
+ SELECT 2, 209, 'Lobster Bisque', 9.00 FROM dual UNION ALL
+ SELECT 2, 210, 'Caesar Salad', 8.00 FROM dual UNION ALL
+ SELECT 2, 211, 'Crispy Goat Cheese Salad', 10.00 FROM dual UNION ALL
+ SELECT 2, 212, 'The Wedge', 11.00 FROM dual UNION ALL
+ SELECT 2, 213, 'Fillet', 24.00 FROM dual UNION ALL
+ SELECT 2, 214, 'Prime Bone-In Ribeye', 22.00 FROM dual UNION ALL
+ SELECT 2, 215, 'Rack of Lamb', 25.00 FROM dual UNION ALL
+ SELECT 2, 216, 'Petite Fillet', 18.00 FROM dual UNION ALL
+ SELECT 2, 217, 'Prime NY Strip', 29.00 FROM dual UNION ALL
+ SELECT 2, 218, 'Organic Roasted Chicken', 27.00 FROM dual UNION ALL
+ SELECT 2, 219, 'Grilled Branzino', 24.00 FROM dual UNION ALL
+ SELECT 2, 220, 'Grilled Atlantic Salmon', 28.00 FROM dual UNION ALL
+ SELECT 2, 221, 'Spicy Jumbo Shrimp', 19.00 FROM dual UNION ALL
+ SELECT 2, 222, 'Broiled 1.5 lb Main Lobster', 21.00 FROM dual UNION ALL
+ SELECT 2, 223, 'Gruyere Cheese Tater Tots', 6.00 FROM dual UNION ALL
+ SELECT 2, 224, 'Creamed Spinach', 7.00 FROM dual UNION ALL
+ SELECT 2, 225, 'Grilled Jumbo Asparagus', 6.00 FROM dual UNION ALL
+ SELECT 2, 226, 'Mac' || chr(38) || 'Cheese', 6.00 FROM dual UNION ALL
+ SELECT 2, 227, 'Yukon Gold Mashed Potatoes', 8.00 FROM dual UNION ALL
+ SELECT 2, 228, 'Saut'|| chr(233) || 'ed Mushrooms', 6.00 FROM dual UNION ALL
+ SELECT 2, 229, 'Truffled French Fries', 9.00 FROM dual UNION ALL
+ SELECT 2, 230, 'Salted Baked Potato', 6.00 FROM dual UNION ALL
+
+ -- 3 - Giovanni's Table
+ SELECT 3, 301, 'Focaccia Della Casa', 8.00 FROM dual UNION ALL
+ SELECT 3, 302, 'Frittura Mista per Due', 14.00 FROM dual UNION ALL
+ SELECT 3, 303, 'Antipasti per Due', 15.00 FROM dual UNION ALL
+ SELECT 3, 304, 'Insalata Caprese per Due', 9.00 FROM dual UNION ALL
+ SELECT 3, 305, 'Focaccie alla Giovanni', 11.00 FROM dual UNION ALL
+ SELECT 3, 306, 'Insalata di Rughetta e Bresaola', 15.00 FROM dual UNION ALL
+ SELECT 3, 307, 'Melanzane alla Parmigiana', 13.00 FROM dual UNION ALL
+ SELECT 3, 308, 'Insalata alla Cesare', 9.00 FROM dual UNION ALL
+ SELECT 3, 309, 'Zuppa di Lenticchie alla Contadina', 7.00 FROM dual UNION ALL
+ SELECT 3, 310, 'Zuppa del Giorno', 8.00 FROM dual UNION ALL
+ SELECT 3, 311, 'Gnocchi di Patate con Crema al Gorgonzola', 21.00 FROM dual UNION ALL
+ SELECT 3, 312, 'Pappardelle alla Crema di Radicchio e Pancetta', 20.00 FROM dual UNION ALL
+ SELECT 3, 313, 'Risotto al Fungi Trifolati', 28.00 FROM dual UNION ALL
+ SELECT 3, 314, 'Lasagna Tradizionale al Sugo di Carne', 22.00 FROM dual UNION ALL
+ SELECT 3, 315, 'Taglierini al Pomodorini, Calamari, Capesante e Pesto', 25.00 FROM dual UNION ALL
+ SELECT 3, 316, 'Filetto di Manzo alla Griglia', 32.00 FROM dual UNION ALL
+ SELECT 3, 317, 'Filetto di Pollo Ripieno di Ricotta e Funghi', 28.00 FROM dual UNION ALL
+ SELECT 3, 318, 'Gamberoni al Forno', 28.00 FROM dual UNION ALL
+ SELECT 3, 319, 'Polpette alla Romana', 29.00 FROM dual UNION ALL
+ SELECT 3, 320, 'Filetti di Sogliola alla Mugnaia', 33.00 FROM dual UNION ALL
+ -- 4 - Izumi Hibachi & Sushi
+ SELECT 4, 401, 'Miso Soup', 3.00 FROM dual UNION ALL
+ SELECT 4, 402, 'Shrimp' || chr(38) || 'Vegetable Tempura', 11.00 FROM dual UNION ALL
+ SELECT 4, 403, 'Shrimp Firecracker Spring Roll', 9.00 FROM dual UNION ALL
+ SELECT 4, 404, 'Tuna Wasabi', 10.00 FROM dual UNION ALL
+ SELECT 4, 405, 'Albacore Tataki with Sesame Dressing and Crispy Leeks', 9.00 FROM dual UNION ALL
+ SELECT 4, 406, 'Octopus Yuzu Chimichurri', 10.00 FROM dual UNION ALL
+ SELECT 4, 407, 'Albacore Sashimi', 12.00 FROM dual UNION ALL
+ SELECT 4, 408, 'Amberjack Sashimi', 12.00 FROM dual UNION ALL
+ SELECT 4, 409, 'Octopus Sashimi', 12.00 FROM dual UNION ALL
+ SELECT 4, 410, 'Shrimp Sashimi', 12.00 FROM dual UNION ALL
+ SELECT 4, 411, 'Salmon Sashimi', 12.00 FROM dual UNION ALL
+ SELECT 4, 412, 'Snapper Sashimi', 12.00 FROM dual UNION ALL
+ SELECT 4, 413, 'Tuna Sashimi', 12.00 FROM dual UNION ALL
+ SELECT 4, 414, 'Yellowtail Sashimi', 12.00 FROM dual UNION ALL
+ SELECT 4, 415, 'Champagne Lobster in Yuzu Wrap Roll', 15.00 FROM dual UNION ALL
+ SELECT 4, 416, 'Snow Crab California Roll', 13.00 FROM dual UNION ALL
+ SELECT 4, 417, 'Rainbow Roll', 14.00 FROM dual UNION ALL
+ SELECT 4, 418, 'Salmon Lovers Roll', 13.00 FROM dual UNION ALL
+ SELECT 4, 419, 'Seared Tuna Tataki Roll', 13.00 FROM dual UNION ALL
+ SELECT 4, 420, 'Crispy Philly Roll', 13.00 FROM dual UNION ALL
+ SELECT 4, 421, 'Izumi Spider Roll', 13.00 FROM dual UNION ALL
+ SELECT 4, 422, 'Spicy Crispy Shrimp Roll', 13.00 FROM dual UNION ALL
+ SELECT 4, 423, 'Spicy Crispy Tuna Roll', 13.00 FROM dual UNION ALL
+ SELECT 4, 424, 'Baked Snow Crab' || chr(38) || 'Salmon Dynamite Roll', 16.00 FROM dual UNION ALL
+ SELECT 4, 425, 'Truffle Creamy Lobster Tempura Roll', 17.00 FROM dual UNION ALL
+ SELECT 4, 426, 'Izumi Ryu Futomaki Roll', 17.00 FROM dual UNION ALL
+ SELECT 4, 427, 'Samurai Teppan Premier Combo', 45.00 FROM dual UNION ALL
+ SELECT 4, 428, 'Origami Teppan Premier Combo', 45.00 FROM dual UNION ALL
+ SELECT 4, 429, 'Geisha Teppan Premier Combo', 45.00 FROM dual UNION ALL
+ SELECT 4, 430, 'Izumi Teppan Premier Combo', 45.00 FROM dual UNION ALL
+ SELECT 4, 431, 'Tori Teppan Classic', 39.00 FROM dual UNION ALL
+ SELECT 4, 432, 'Gyu Teppan Classic', 39.00 FROM dual UNION ALL
+ SELECT 4, 433, 'Ebi Teppan Classic', 39.00 FROM dual ;
