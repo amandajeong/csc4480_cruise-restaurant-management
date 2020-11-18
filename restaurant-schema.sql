@@ -55,7 +55,7 @@ CREATE TABLE order_item (
     Oreservation_id number(9)   not null,
     Omenu_id        number(4)   not null,
     primary key (Oreservation_id, Omenu_id),
-    foreign key (Oreservation_id) references restaurant(rest_id),
+    foreign key (Oreservation_id) references reservation(Reservation_id),
     foreign key (Omenu_id) references menu(Menu_id)
 );
 
