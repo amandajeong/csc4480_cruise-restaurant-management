@@ -60,8 +60,8 @@ CREATE TABLE order_item (
 );
 
 DROP VIEW order_summary;
-CREATE VIEW order_summary(reservation_id, subtotal, tax, tip, total)
-AS SELECT reservation_id, sum(Mcost), sum(Mcost) * 0.05, sum(Mcost) * 0.2, sum(Mcost) * 1.25
+CREATE VIEW order_summary(restaurant_id, reservation_id, subtotal, tax, tip, total)
+AS SELECT Rrest_id, reservation_id, sum(Mcost), sum(Mcost) * 0.05, sum(Mcost) * 0.2, sum(Mcost) * 1.25
 FROM ((reservation JOIN order_item ON Reservation_id = Oreservation_id)
 JOIN menu ON Menu_id = Omenu_id)
-GROUP BY reservation_id;
+GROUP BY Rrest_id, reservation_id;
